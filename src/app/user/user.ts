@@ -14,6 +14,7 @@ interface UserItem {
 })
 export class User {
   @Input({required : true}) user!: UserItem;
+  @Input({required: true}) selected!: boolean;
   @Output() select = new EventEmitter();
 
   get imagePath() {
